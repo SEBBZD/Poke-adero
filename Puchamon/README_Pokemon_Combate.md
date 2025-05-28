@@ -111,18 +111,3 @@ g++ -std=c++11 main.cpp Pokemon.cpp Ataque.cpp -o pokemon
 ```
 
 ---
-
-## 💡 Posibles Mejoras
-
-- 🔄 **Sistema de tipos**: Implementar ventajas y desventajas entre tipos (agua, fuego, etc.)
-- 📈 **Sistema de niveles y experiencia**: Añadir progresión y evolución de Pokémon
-- 🎨 **Interfaz gráfica**: Migrar a una interfaz con **SFML**, **SDL** o similar
-- 🧩 **Más Pokémon**: Ampliar el número de criaturas disponibles
-
----
-
-## 🧠 Justificación de Decisiones
-
-- **Simpleza**: Enfocado en cubrir los requisitos básicos de forma clara y funcional.
-- **Extensibilidad**: Estructura orientada a objetos facilita agregar nuevas características.
-- **Legibilidad**: Nombres descriptivos y código modular para fácil mantenimiento y comprensión.
