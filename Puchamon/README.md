@@ -10,8 +10,6 @@ Para representar los diferentes movimientos que pueden usar los Pokémon en bata
 Cada Pokémon necesita tener ataques con características propias (nombre, daño) que puedan ser ejecutados durante el combate.
 
 ¿Cómo se implementó?
-
-cpp
 class Ataque {
 private:
     std::string nombre;
@@ -21,6 +19,7 @@ public:
     std::string getNombre() const;
     int getDamage() const;
 };
+
 2. Clase Pokemon (Pokemon.h/Pokemon.cpp)
 ¿Para qué se implementó?
 Para representar a cada Pokémon con sus atributos y capacidades.
@@ -35,8 +34,6 @@ Lógica de combate (recibir daño, calcular daño)
 Estado actual (debilitado o no)
 
 ¿Cómo se implementó?
-
-cpp
 class Pokemon {
 private:
     std::string nombre;
@@ -48,7 +45,6 @@ public:
     void aprenderAtaque(Ataque ataque);
     void recibirDamage(int cantidad);
     bool estaDebilitado() const;
-    // ... otros métodos ...
 };
 3. Sistema de Combate (main.cpp)
 ¿Para qué se implementó?
@@ -64,8 +60,6 @@ Se muestra información del estado
 Se determina un ganador
 
 ¿Cómo se implementó?
-
-cpp
 void realizarTurno(Pokemon& atacante, Pokemon& defensor) {
     // Mostrar menú de ataques
     // Calcular daño
@@ -78,6 +72,7 @@ while(!pokemon1.estaDebilitado() && !pokemon2.estaDebilitado()) {
     realizarTurno(pokemon1, pokemon2);
     realizarTurno(pokemon2, pokemon1);
 }
+
 Requisitos Cumplidos
 Requisito	Implementación
 Combate por turnos	Sistema alternado en main.cpp
@@ -85,26 +80,5 @@ Menú textual	Interfaz en realizarTurno()
 Múltiples ataques	Vector de ataques en clase Pokemon
 Sistema de victoria	Verificación con estaDebilitado()
 Cómo Compilar y Ejecutar
-Compilación:
-
-bash
-g++ -std=c++11 main.cpp Pokemon.cpp Ataque.cpp -o pokemon
-Ejecución:
-
-bash
-./pokemon
-Posibles Mejoras
-Sistema de tipos: Implementar ventajas/desventajas entre tipos
-
-Niveles y experiencia: Añadir progresión
-
-Interfaz gráfica: Usar SFML o similar
-
-Más Pokémon: Expandir el roster disponible
-
-Justificación de Decisiones
-Simpleza: Se priorizó cumplir con los requisitos mínimos de forma clara
-
-Extensibilidad: El código está estructurado para fácil expansión
-
-Legibilidad: Nombres descriptivos y estructura organizada
+Compilación:g++ -std=c++11 main.cpp Pokemon.cpp Ataque.cpp -o pokemon
+Ejecución:./pokemon
