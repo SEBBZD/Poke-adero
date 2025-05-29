@@ -9,7 +9,7 @@ Este proyecto implementa un sistema de combate por turnos inspirado en Pokémon,
 - Soporte para múltiples ataques
 - Detección de victoria
 
-En el proyecto se utilizo estructuras para mejorar como se trabajaba y que fuera mas facil de entender que hacia cada cosa, se utilizaron nombres en inglés en ciertas partes del código, ya que caracteres especiales como 'ñ' o tildes generaban errores.
+En el proyecto se utilizo .h para mejorar como se trabajaba y que fuera mas facil de entender que hacia cada cosa, se utilizaron nombres en inglés en ciertas partes del código, ya que caracteres especiales como 'ñ' o tildes generaban errores.
 
 ---
 
