@@ -1,5 +1,5 @@
 # Pokémon y parqueadero
-Juan Sebastian Garcia Contreras
+Juan Sebastian Garcia Contreras  
 Johan David Ramirez Camargo
 ---
 ## Descripcion:
