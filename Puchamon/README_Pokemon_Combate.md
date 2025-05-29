@@ -11,7 +11,7 @@ Este proyecto implementa un sistema de combate por turnos inspirado en Pokémon,
 
 ---
 
-## 🧱 Estructura del Código
+## Estructura del Código
 
 ### 1. `Ataque` (`Ataque.h` / `Ataque.cpp`)
 
