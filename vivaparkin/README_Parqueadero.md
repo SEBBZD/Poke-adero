@@ -33,16 +33,6 @@ def __init__(self, filas=8, columnas=8):
         self.tarifa = 201
 ```
 
----
-
-### 3. Sistema de Combate (`main.cpp`)
-
-**¿Para qué y porque se implemento?** <br> 
-Crea dos Pokémon vacíos y los configura con inicializarPokemons(). <br>
-Alterna turnos entre pokemon1 y pokemon2. <br>
-En cada turno, el usuario elige un ataque. <br>
-Verifica si algún Pokémon queda debilitado (estaDebilitado()). <br>
-Anuncia al ganador cuando un Pokémon llega a 0 HP.
 
 ## Cómo Compilar y Ejecutar
 
