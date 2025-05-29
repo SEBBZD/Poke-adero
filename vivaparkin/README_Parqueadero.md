@@ -40,13 +40,7 @@ Para compilar el codigo se tiene que abrir una terminal en la carpeta donde se d
 Para abrir una terminal en la carpeta solo da click derecho dentro de la carpeta y dale click donde dice " Abrir en terminal ".
 
 ### Compilación
-```bash
-
+```
+parqueadero.py
 ```
 
-### Ejecución
-```bash
-
-```
-
----
