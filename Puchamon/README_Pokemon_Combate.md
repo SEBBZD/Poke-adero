@@ -1,6 +1,6 @@
-# 🐉 Sistema de Combate Pokémon en C++
+# Sistema de Combate Pokémon en C++
 
-## 📌 Descripción del Proyecto
+## Descripción del Proyecto
 
 Este proyecto implementa un sistema de combate por turnos inspirado en Pokémon, desarrollado en **C++**. Cumple con los requisitos mínimos establecidos:
 
