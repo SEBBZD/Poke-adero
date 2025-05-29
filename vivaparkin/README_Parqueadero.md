@@ -16,42 +16,41 @@ En el proyecto se utilizo estructuras para mejorar como se trabajaba y que fuera
 
 ## Estructura del Código
 
-### 1. `Parquedero` (`parquedero.py`)
+### 1. `Parqueadero` (`parquedero.py`)
 
 **¿Como funciona el codigo?** <br>
-7
+
+  1 Mapa del parqueadero:  
+    Se genera un espacio de parqueadero de al menos 8X8 espacios, ademas se les representan los espacios con simbolos:  
+    **E**=Entrada  
+    **S**=Salida  
+    **I**=Vias de Acceso  
+    **P**=Espacios Disponibles  
+    **X**=Espacios Ocupados  
+  2 Registro de entrada:  
+    Al ingresar un vehiculo se registra la placa, se le asigna el primer espacio disponible (**P¨**) y se le registra la hora de entrada.  
+  3 Registro de salida:  
+    Se calcula el tiempo de permanencia y el costo total. Ademas <em>se tienen en cuenta ciertas condiciones:<em>  
+    - **Descuento del 50%** si el vehiculo permanecio 5 minutos o menos.  
+    - **Tarifa nocturna** si el ingreso ocurrio entre las 7 p.m. y las 6 a.m.  
+  4 Ruta:  
+    Se muestran una serie de instrucciones al conductor sobre como llegar desde la entrada hasta su vehiculo.  
+  5 Menu Interactivo:  
+    Se presenta un menu con opciones numeradas.
 
 
-### 2. `Pokemon` (`Pokemon.h` / `Pokemon.cpp`)
+### 2. `Aspectos Tecnicos` (`parqueadero.py`)  
 
-**¿Para qué y porque se implemento?** <br> 
-Pokemon.h declara la clase pokemon, su estructura, métodos y atributos. <br>
-Pokemon.cpp implementa los métodos declarados en Pokemon.h y define como funciona cada metodo.
+Se uso la libreria **datetime** para los tiempos de entrada y salida.<br>
+Se controlan los vehiculos con una diccionario donde la clave es la placa.<br>
+El sistema es adaptable a otros espacios de parqueadero.<br>
 
----
-
-### 3. Sistema de Combate (`main.cpp`)
-
-**¿Para qué y porque se implemento?** <br> 
-Crea dos Pokémon vacíos y los configura con inicializarPokemons(). <br>
-Alterna turnos entre pokemon1 y pokemon2. <br>
-En cada turno, el usuario elige un ataque. <br>
-Verifica si algún Pokémon queda debilitado (estaDebilitado()). <br>
-Anuncia al ganador cuando un Pokémon llega a 0 HP.
+### 3. Aspectos de Innovacion(`parqueadero.py`)  
+- Se implemento un descuento automatico teniendo en cuenta una franja de tiempo.
+- Se incluyo una tarifa nocturna para ingresos entre 7 p.m. y 6 a.m.
+- Se dan instrucciones claras para encontrar el vehiculo desde la salida.
 
 ## Cómo Compilar y Ejecutar
 
-Para compilar el codigo se tiene que abrir una terminal en la carpeta donde se descargue el proyexto y poner los siguientes codigos en la terminal.
+Para compilar el codigo se tiene que abrir una terminal en la carpeta donde se descargue el proyecto y poner los siguientes codigos en la terminal.
 Para abrir una terminal en la carpeta solo da click derecho dentro de la carpeta y dale click donde dice " Abrir en terminal ".
-
-### Compilación
-```bash
-g++ -std=c++11 main.cpp Pokemon.cpp Ataque.cpp -o pokemon
-```
-
-### Ejecución
-```bash
-./pokemon
-```
-
----
