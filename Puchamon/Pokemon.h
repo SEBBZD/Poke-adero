@@ -24,4 +24,4 @@ public:
     int getHPMax() const;
 };
 
-#endif // POKEMON_H
+#endif
