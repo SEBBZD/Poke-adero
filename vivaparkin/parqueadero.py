@@ -6,7 +6,6 @@ class Parqueadero:
         self.columnas = max(columnas, 8)
         self.mapa = self.crear_mapa()
         self.vehiculos = {}
-        self.tarifa = 201
     
     def crear_mapa(self):
         mapa = [[' ' for i in range(self.columnas)] for i in range(self.filas)]
@@ -34,7 +33,7 @@ class Parqueadero:
     
     def mostrar_mapa(self):
         print("\nMapa del Parqueadero:")
-        print("Significados de simbolos: E = Entrada, S = Salida, | = Vía, P = Libre, X = Ocupado")
+        print("Significados de símbolos: E = Entrada, S = Salida, | = Vía, P = Libre, X = Ocupado")
         print("-" * (self.columnas * 2 + 3))
         
         for fila in self.mapa:
@@ -59,6 +58,7 @@ class Parqueadero:
         return False
     
     def registrar_salida(self, placa):
+        global turno
         if placa not in self.vehiculos:
             print("\nVehículo no registrado")
             return False
@@ -67,8 +67,14 @@ class Parqueadero:
         self.mapa[fila][col] = 'P'
         salida = datetime.datetime.now()
         tiempo = (salida - entrada).total_seconds() / 60
-        costo = tiempo * self.tarifa
-        
+
+        tarifa_actual = 201 if turno == "día" else 250
+
+        if tiempo < 5:
+            costo = 100
+        else:
+            costo = tiempo * tarifa_actual
+
         del self.vehiculos[placa]
         
         print(f"\nVehículo {placa} salió del parqueadero")
@@ -103,13 +109,16 @@ def mostrar_menu():
     print("3. Registrar salida de vehículo")
     print("4. Mostrar ruta a vehículo")
     print("5. Salir")
+    print("6. Cambiar turno (Día/Noche)")
 
 if __name__ == "__main__":
     parqueadero = Parqueadero(9, 9)
+    turno = "día"
     
     while True:
+        print(f"\n[Turno actual: {turno.upper()}]")
         mostrar_menu()
-        opcion = input("Seleccione una opción (1-5): ")
+        opcion = input("Seleccione una opción (1-6): ")
         
         if opcion == "1":
             parqueadero.mostrar_mapa()
@@ -125,6 +134,9 @@ if __name__ == "__main__":
         elif opcion == "5":
             print("Gracias por usar el sistema. ¡Hasta pronto!")
             break
+        elif opcion == "6":
+            turno = "noche" if turno == "día" else "día"
+            print(f"Turno cambiado a: {turno.upper()}")
         else:
             print("Opción no válida. Intente nuevamente.")
         
