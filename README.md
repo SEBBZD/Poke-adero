@@ -38,7 +38,7 @@ git clone: https://github.com/criptercon/Poke-adero.git
 ### Python:  
 Dirijase al directorio:  
 ```
-vivaparkin
+VivaParkin y busca el README, ahí encontrarás información sobre el código y cómo ejecutarlo.
 
 ```
 Ejecute  
@@ -49,7 +49,7 @@ parqueadero.py
 ### C++
 Dirijase al directorio:  
 ```
-Puchamon
+Puchamon y busca el README, ahí encontrarás información sobre el código y cómo ejecutarlo.
 ```
 Ejecute:  
 ```
