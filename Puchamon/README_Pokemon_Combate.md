@@ -9,77 +9,28 @@ Este proyecto implementa un sistema de combate por turnos inspirado en Pokémon,
 - Soporte para múltiples ataques
 - Detección de victoria
 
+En el proyecto se utilizo estructuras para mejorar como se trabajaba y que fuera mas facil de entender que hacia cada cosa, se utilizaron nombres en inglés en ciertas partes del código, ya que caracteres especiales como 'ñ' o tildes generaban errores.
 ---
 
 ## Estructura del Código
 
 ### 1. `Ataque` (`Ataque.h` / `Ataque.cpp`)
 
-**¿Para qué se implementó?**  
-Representa los movimientos que puede usar un Pokémon en combate.
+**¿Para qué y porque se implemento?** <br>
+Contienen las funciones, la estructura que va a tener cada ataque y como se va a utilizar
 
-**¿Por qué es necesario?**  
-Cada Pokémon debe tener ataques únicos (con nombre y daño específico).
-
-**Implementación:**
-```cpp
-class Ataque {
-private:
-    std::string nombre;
-    int damage;
-public:
-    Ataque(std::string nombre, int damage);
-    std::string getNombre() const;
-    int getDamage() const;
-};
-```
-
----
 
 ### 2. `Pokemon` (`Pokemon.h` / `Pokemon.cpp`)
 
-**¿Para qué se implementó?**  
-Modela a un Pokémon con sus atributos, ataques y lógica de combate.
-
-**¿Por qué es necesario?**  
-Permite gestionar la salud, ataques disponibles y determinar si un Pokémon ha sido derrotado.
-
-**Implementación:**
-```cpp
-class Pokemon {
-private:
-    std::string nombre;
-    int hp;
-    int hpActual;
-    std::vector<Ataque> ataques;
-public:
-    Pokemon(std::string nombre, int hp);
-    void aprenderAtaque(Ataque ataque);
-    void recibirDamage(int cantidad);
-    bool estaDebilitado() const;
-};
-```
+**¿Para qué y porque se implemento?** <br> 
+Permite gestionar la salud, ataques disponibles, logica del combate y determinar si un Pokémon ha sido derrotado.
 
 ---
 
 ### 3. Sistema de Combate (`main.cpp`)
 
-**¿Para qué se implementó?**  
-Gestiona la interacción por turnos entre dos Pokémon.
-
-**¿Por qué es necesario?**  
-Simula el flujo de combate con turnos alternados, elección de ataques y detección de victoria.
-
-**Implementación básica:**
-```cpp
-void realizarTurno(Pokemon& atacante, Pokemon& defensor) {
-}
-
-while (!pokemon1.estaDebilitado() && !pokemon2.estaDebilitado()) {
-    realizarTurno(pokemon1, pokemon2);
-    realizarTurno(pokemon2, pokemon1);
-}
-```
+**¿Para qué y porque se implemento?** <br> 
+Gestiona la interacción por turnos entre dos Pokémon simula el combate por turnos alternados, elección de ataques y detección de victoria.
 
 ## Cómo Compilar y Ejecutar
 
