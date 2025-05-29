@@ -10,17 +10,16 @@ Este proyecto implementa un sistema de parqueadero, desarrollado en **Python**. 
 - Sistema de cobro
 - Sistema de disponibilidad:
 
-En el proyecto se utilizo estructuras para mejorar como se trabajaba y que fuera mas facil de entender que hacia cada cosa. Necesite ayuda de IA en el sistema de cobro y en la biblioteca datetime
+En el proyecto se utilizo estructuras para mejorar como se trabajaba y que fuera mas facil de entender que hacia cada cosa. Necesite ayuda de IA en el sistema de cobro y en la biblioteca datetime.
 
 ---
 
 ## Estructura del Código
 
-### 1. `Ataque` (`Ataque.h` / `Ataque.cpp`)
+### 1. `Parquedero` (`parquedero.py`)
 
-**¿Para qué y porque se implemento?** <br>
-Ataque.h declara la clase Ataque, su estructura, métodos y atributos. <br>
-Ataque.cpp implementa los métodos declarados en Ataque.h y define como funciona cada metodo.
+**¿Como funciona el codigo?** <br>
+7
 
 
 ### 2. `Pokemon` (`Pokemon.h` / `Pokemon.cpp`)
