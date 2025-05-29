@@ -19,14 +19,19 @@ En el proyecto se utilizo estructuras para mejorar como se trabajaba y que fuera
 ### 1. `Parquedero` (`parquedero.py`)
 
 **¿Como funciona el codigo?** <br>
-7
+Se utilizaron 7 diferentes def para definir funciones y poder organizar el codigo, se explicara cada def para lograr entender como funcionan.
 
 
-### 2. `Pokemon` (`Pokemon.h` / `Pokemon.cpp`)
+### 2. `__init__` (`def __init__(self, filas=8, columnas=8):`)
 
-**¿Para qué y porque se implemento?** <br> 
-Pokemon.h declara la clase pokemon, su estructura, métodos y atributos. <br>
-Pokemon.cpp implementa los métodos declarados en Pokemon.h y define como funciona cada metodo.
+```python
+def __init__(self, filas=8, columnas=8):
+        self.filas = max(filas, 8)
+        self.columnas = max(columnas, 8)
+        self.mapa = self.crear_mapa()
+        self.vehiculos = {}
+        self.tarifa = 201
+```
 
 ---
 
