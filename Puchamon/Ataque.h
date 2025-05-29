@@ -13,4 +13,4 @@ public:
     int getDamage() const;
 };
 
-#endif // ATAQUE_H
+#endif
