@@ -41,12 +41,12 @@ Para abrir una terminal en la carpeta solo da click derecho dentro de la carpeta
 
 ### Compilación
 ```bash
-g++ -std=c++11 main.cpp Pokemon.cpp Ataque.cpp -o pokemon
+
 ```
 
 ### Ejecución
 ```bash
-./pokemon
+
 ```
 
 ---
