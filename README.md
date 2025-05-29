@@ -1,2 +1,2 @@
-# Poke-adero
+# Pokémon y parqueadero
 Juan Sebastian Garcia Contreras
