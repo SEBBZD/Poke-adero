@@ -57,7 +57,6 @@ public:
     void aprenderAtaque(Ataque ataque);
     void recibirDamage(int cantidad);
     bool estaDebilitado() const;
-    // Otros métodos relevantes
 };
 ```
 
@@ -74,9 +73,6 @@ Simula el flujo de combate con turnos alternados, elección de ataques y detecci
 **Implementación básica:**
 ```cpp
 void realizarTurno(Pokemon& atacante, Pokemon& defensor) {
-    // Mostrar menú de ataques
-    // Calcular y aplicar daño
-    // Mostrar resultados
 }
 
 while (!pokemon1.estaDebilitado() && !pokemon2.estaDebilitado()) {
@@ -85,20 +81,7 @@ while (!pokemon1.estaDebilitado() && !pokemon2.estaDebilitado()) {
 }
 ```
 
----
-
-## ✅ Requisitos Cumplidos
-
-| Requisito            | Implementación                            |
-|----------------------|--------------------------------------------|
-| Combate por turnos   | Alternancia en el bucle principal          |
-| Menú textual         | Opciones de ataque en `realizarTurno()`    |
-| Múltiples ataques    | Vector de ataques en la clase `Pokemon`    |
-| Sistema de victoria  | Lógica basada en `estaDebilitado()`        |
-
----
-
-## 🛠️ Cómo Compilar y Ejecutar
+## Cómo Compilar y Ejecutar
 
 ### Compilación
 ```bash
